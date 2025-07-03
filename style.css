@@ -623,15 +623,23 @@ html, body {
 
 .project-preview-img {
   position: relative;
+  width: 100%;
+  max-width: 100%;
   overflow: hidden;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-preview-img img {
-  display: block;
   width: 100%;
   height: auto;
+  display: block;
+  object-fit: contain;
   border-radius: 12px;
 }
+
 
 /* Redirect arrow */
 .redirect-icon {
