@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harshal Palande</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- GSAP Plugins -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollSmoother.min.js"></script>
+</head>
+<body>
+  <div class="custom-cursor"></div>
+
+  <!-- Smooth Scroll Wrapper -->
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+
+      <!-- HERO -->
+      <section class="hero">
+        <div class="scroll-text-wrapper">
+          <div class="scroll-text">HARSHAL PALANDE HARSHAL PALANDE HARSHAL PALANDE</div>
+        </div>
+        <div class="avatar-container">
+          <img src="images/Avtar.png" alt="Harshal's Avatar" class="avatar" />
+        </div>
+      </section>
+
+
+      <!-- ABOUT -->
+      <section id="about" class="about-section">
+        <div class="greeting-title">
+          <span id="greeting-text">Hello</span>
+        </div>
+        <p id="about-text" class="text-block">
+          Harshal is a passionate developer and AI enthusiast. I love building smart, real-world tech solutions—from web apps to automation projects. Always curious, always learning.
+        </p>
+      </section>  
+
+      <!-- PROJECTS -->
+      <section class="project-section">
+        <h2>💼 Work</h2>
+        <!--Project 1-->
+        <div class="project-title-block">
+          <!-- Project Preview Image -->
+          <div class="project-preview-img">
+            <img src="images/Pack My Bag .png" alt="Pack My Bag Preview" />
+          </div>
+        
+          <!-- Title and Clipping Text -->
+          <h3>Pack My Bag</h3>
+          <hr />
+          <div class="clipping-text-container">
+            <h1 class="clipping-text">Smart Packing<span>Adds Gear by Weather</span></h1>
+            <h1 class="clipping-text">Live Weather<span>Real-Time Updates</span></h1>
+            <h1 class="clipping-text">Fast.Clean.<span>Custom List</span></h1>
+            <h1 class="clipping-text">Wanna Try?<span><a href="https://pack-my-bag-production.up.railway.app/">Happy Journey!!🎒✈️</a></span></h1>
+            <!--Dropdown-->
+            <div class="clipping-text-container dropdown-wrapper">
+              <h1 class="clipping-text dropdown-toggle">More Details →<span>Curious huh!</span></h1>
+            
+              <div class="dropdown-content">
+                <ul>
+                  <li class="dropdown-title">Problems I Faced</li>
+                  <li><strong>1. Dynamic Weather Integration:</strong> Fetching real-time weather data using OpenWeather API and handling async + errors.</li>
+                  <li><strong>2. Smart Packing Logic:</strong> Building condition-based packing logic using weather mappings — tricky but fun!</li>
+                  <li><strong>3. Flask Backend Setup:</strong> Routing, API endpoints, Railway deployment, and environment setup.</li>
+                  <li><strong>4. UI/UX Design:</strong> Iterating on a clean but modern layout that’s also mobile-friendly.</li>
+                  <li><strong>5. API Rate Limits:</strong> Learned to manage fallback behavior when API limits are hit.</li>
+                </ul>
+              </div>
+            </div>
+            
+
+               
+
+        <!--<div class="project-card">
+          <img src="images/Pack My Bag .png" alt="Pack My Bag Preview" />
+          <a href="project-detail.html" class="hover-button" target="_blank">
+            <i class="arrow-icon">↗</i>
+          </a>
+        </div>-->
+
+        <!--Project 2-->
+        <div class="project-title-block">
+          <!-- Cursor for scroll arrows -->
+          <div class="project-preview-img multi-image-scroll">
+            <!-- Arrows INSIDE -->
+            <div class="scroll-arrow left-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15 6L9 12L15 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="scroll-arrow right-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 6L15 12L9 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          
+            <div class="image-wrapper">
+              <img src="images/model accuracy.png" alt="Image 1" />
+              <img src="images/feature importance.png" alt="Image 2" />
+              <img src="images/confusion matrix.png" alt="Image 3" />
+            </div>
+          </div>
+                    
+        
+          <!-- Title and Clipping Text -->
+          <h3>Flight Delay Prediction</h3>
+          <hr />
+          <div class="clipping-text-container">
+            <h1 class="clipping-text">Predicts flight delays<span>Know before you go</span></h1>
+            <h1 class="clipping-text">Real flight data used<span>Trained for accuracy</span></h1>
+            <h1 class="clipping-text">Tracks time and route<span>Based on real trends</span></h1>
+            <h1 class="clipping-text">Random Forest powered<span>Smart and scalable</span></h1>
+            <!--dropdown-->
+            <div class="clipping-text-container dropdown-wrapper">
+              <h1 class="clipping-text dropdown-toggle">More Details →<span>Curious huh!</span></h1>
+            
+              <div class="dropdown-content">
+                <ul>
+                  <li class="dropdown-title">Problems I Faced</li>
+                  <li><strong>1. Feature selection confusion:</strong> deciding what really affects delay wasn’t straightforward.</li>
+                  <li><strong>2. Slow training on large data :</strong> even in notebook, bigger datasets slowed things down.</li>
+                  <li><strong>3. Visualization clutter:</strong> making clean plots for analysis was harder than expected.</li>
+                  <li><strong>4. The dataset was imbalanced:</strong> meaning most flights weren’t delayed — so the model struggled to learn how to accurately predict delays.</li>
+                  <li><strong>5. Overfitting happened a few times:</strong> where the model performed great on training data but failed to generalize to real-world scenarios.</li>
+                </ul>
+              </div>
+            </div>
+
+        <!--project 3-->
+        <div class="project-title-block">
+          <!-- Project Preview Image -->
+          <div class="project-preview-img">
+            <img src="images/Pack My Bag .png" alt="Pack My Bag Preview" />
+          </div>
+        
+          <!-- Title and Clipping Text -->
+          <h1>Pack My Bag</h1>
+          <hr />
+          <div class="clipping-text-container">
+            <h1 class="clipping-text">Travel App<span>Plan Smart</span></h1>
+            <h1 class="clipping-text">AI Based<span>Personalized Packing</span></h1>
+            <h1 class="clipping-text">Smart UI<span>Super Intuitive</span></h1>
+            <h1 class="clipping-text">Open Source<span><a href="https://pack-my-bag-production.up.railway.app/">Wanna Try?</a></span></h1>
+          </div>
+        </div>
+
+        
+      </section>  
+
+    </div>
+  </div>
+
+  <!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+  <h2>📬 Let’s Connect</h2>
+  <p class="contact-subtitle">Open for freelance projects, collaborations, or just a friendly hello.</p>
+
+  <form class="contact-form" action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message..." rows="5" required></textarea>
+    <button type="submit">Send Message 🚀</button>
+  </form>
+
+  <div class="social-icons">
+    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+    <a href="mailto:your-email@example.com">Email</a>
+  </div>
+</section>
+
+
+  <!-- Scroll Avatar Shrink -->
+  <script>
+    const avatar = document.querySelector('.avatar-container');
+    const hero = document.querySelector('.hero');
+    window.addEventListener('scroll', () => {
+      const heroBottom = hero.offsetTop + hero.offsetHeight;
+      avatar.classList.toggle('scrolled', window.scrollY >= heroBottom - 100);
+    });
+  </script>
+
+  <!-- About Text Scrambler -->
+  <script>
+    const textBlock = document.getElementById("about-text");
+    const originalText = textBlock.innerText;
+    textBlock.innerHTML = "";
+    const chars = originalText.split("");
+    const scrambleChars = "!@#$%&*{}[]<>?/|\\~^+=-".split("");
+    chars.forEach(char => {
+      const span = document.createElement("span");
+      span.classList.add("char");
+      span.textContent = char;
+      span.dataset.content = char;
+      textBlock.appendChild(span);
+    });
+    textBlock.addEventListener("pointermove", e => {
+      document.querySelectorAll(".char").forEach(char => {
+        const rect = char.getBoundingClientRect();
+        const dx = e.clientX - (rect.left + rect.width / 2);
+        const dy = e.clientY - (rect.top + rect.height / 2);
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 120 && char.innerText === char.dataset.content) {
+          const randChar = scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
+          char.innerText = randChar;
+          setTimeout(() => {
+            char.innerText = char.dataset.content;
+          }, 80);
+        }
+      });
+    });
+  </script>
+
+  <!-- Greeting Rotator -->
+  <script>
+    const greetings = ["नमस्कार", "Hello", "Namaste", "Bonjour", "Hola", "Ciao", "こんにちは", "안녕하세요", "Guten Tag", "Olá", "Salam", "Hej"];
+    const greetingText = document.getElementById("greeting-text");
+    let index = 0;
+    setInterval(() => {
+      greetingText.textContent = greetings[index];
+      index = (index + 1) % greetings.length;
+    }, 600);
+  </script>
+
+  <!-- Custom Cursor -->
+  <script>
+    const cursor = document.querySelector('.custom-cursor');
+    let mouseX = 0, mouseY = 0;
+    function animateCursor() {
+      cursor.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+      requestAnimationFrame(animateCursor);
+    }
+    document.addEventListener('mousemove', e => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+    const hoverTargets = document.querySelectorAll('a, button, .project-showcase');
+    hoverTargets.forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+    });
+    document.addEventListener('mousedown', () => cursor.classList.add('clicked'));
+    document.addEventListener('mouseup', () => cursor.classList.remove('clicked'));
+    animateCursor();
+  </script>
+
+  <!-- GSAP ScrollSmoother Init -->
+  <script>
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+    ScrollSmoother.create({
+      wrapper: "#smooth-wrapper",
+      content: "#smooth-content",
+      smooth: 1.2,
+      effects: true,
+    });
+
+    gsap.utils.toArray('.project-description').forEach((desc, i) => {
+      gsap.from(desc, {
+        opacity: 0,
+        y: 40,
+        duration: 1,
+        delay: i * 0.2,
+        scrollTrigger: {
+          trigger: desc,
+          start: "top 85%",
+          toggleActions: "play none none reverse"
+        }
+      });
+    });
+  </script>
+<!--clipping text-->
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  const textItems = gsap.utils.toArray('.clipping-text');
+
+  textItems.forEach(text => {
+    gsap.to(text, {
+      backgroundSize: '100%',
+      ease: 'none',
+      scrollTrigger: {
+        trigger: text,
+        start: 'center 80%',
+        end: 'center 20%',
+        scrub: true,
+      },
+    });
+  });
+</script>
+
+<!--Dropdown-->
+<script>
+  document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+  toggle.addEventListener('click', () => {
+    const wrapper = toggle.closest('.dropdown-wrapper');
+    wrapper.classList.toggle('open');
+  });
+});
+</script>
+
+
+<script>
+  const images = document.querySelectorAll('.gallery-image');
+  const leftArrow = document.querySelector('.left-arrow');
+  const rightArrow = document.querySelector('.right-arrow');
+  
+  let currentIndex = 0;
+  
+  function showImage(index) {
+    images.forEach((img, i) => {
+      img.classList.remove('active');
+      if (i === index) img.classList.add('active');
+    });
+  }
+  
+  rightArrow.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  });
+  
+  leftArrow.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  });
+  </script>
+  
+  
+  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+
+
+</body>
+</html>
