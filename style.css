@@ -621,6 +621,7 @@ html, body {
   position: relative;
 }
 
+/*Project preview image*/
 .project-preview-img {
   position: relative;
   overflow: hidden;
