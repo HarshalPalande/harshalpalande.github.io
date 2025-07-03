@@ -616,3 +616,40 @@ html, body {
   color: #fff;
 }
 
+.image-link {
+  display: inline-block;
+  position: relative;
+}
+
+.project-preview-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-preview-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Redirect arrow */
+.redirect-icon {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 50%;
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+/* Show on hover */
+.image-link:hover .redirect-icon {
+  opacity: 1;
+  transform: scale(1.1);
+}
