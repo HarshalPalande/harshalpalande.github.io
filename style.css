@@ -632,9 +632,10 @@ html, body {
   height: auto;
   display: block;
   border-radius: 12px;
-  transition: 0.4s ease;
+  transition: 0.3s ease;
 }
 
+/* Dark overlay on hover */
 .project-preview-img::after {
   content: "";
   position: absolute;
@@ -646,35 +647,35 @@ html, body {
 }
 
 .project-preview-img:hover::after {
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
+/* Centered arrow button */
 .project-link {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 2;
   transform: translate(-50%, -50%);
+  z-index: 2;
   opacity: 0;
   transition: 0.3s ease;
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 16px;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 14px 16px;
   border-radius: 50%;
+  font-size: 20px;
+  color: white;
   backdrop-filter: blur(4px);
 }
 
+/* Show button on hover */
 .project-preview-img:hover .project-link {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1.1);
 }
 
 .arrow-icon {
-  width: 24px;
-  height: 24px;
-  stroke: white;
-  transition: transform 0.3s ease;
+  font-size: 22px;
+  line-height: 1;
 }
 
-.project-link:hover .arrow-icon {
-  transform: translateX(2px);
-}
