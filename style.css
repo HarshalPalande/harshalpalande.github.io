@@ -152,13 +152,13 @@ html, body {
 /* PROJECT SECTION */
 .project-section {
   background: #0d0d0d;
-  padding: 160px 30px;
+  padding: 30px 30px 20px;
   text-align: center;
   color: #fff;
 }
 
 .project-section h2 {
-  font-size: 2.8rem;
+  font-size: 6rem;
   margin-bottom: 80px;
   font-family: 'Poppins', sans-serif;
 }
@@ -278,10 +278,10 @@ html, body {
 }
 
 .project-title-block h3 {
-  font-size: 4vw; /* ✅ Bigger responsive title */
+  font-size: 4vw; 
   font-family: 'Inter', sans-serif;
   font-weight: 900;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   color: #fff;
   text-align: center;
 }
@@ -303,24 +303,23 @@ html, body {
   margin: 24px auto 40px; 
 }*/
 
-/* TOP LINE (above project title) — now soft and subtle */
+/* TOP LINE (above project title) */
 .project-title-block hr {
   border: none;
   border-top: 1px solid #222;
-  margin: 30px auto 10px;
+  margin: 0 auto 10px;
   width: 60%;
   opacity: 0.3;
 }
 
-/* BOTTOM LINE (after project ends) — now bold and clear */
+/* BOTTOM LINE (after project ends)*/
 .project-divider {
   border: none;
   border-top: 1px solid #aaa;
-  margin: 80px auto 60px;
+  margin: 60px;
   width: 80%;
   opacity: 1;
 }
-
 
 
 /* Gallery Container */
@@ -419,8 +418,34 @@ html, body {
 
 /* Title + Description Block */
 .project-title-block {
-  margin-top: 10px;
-  margin-bottom: 60px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto 40px;
+  display: block;
+}
+
+.project-title {
+  display: inline-block; /* Helps avoid text alignment bugs */
+}
+
+/* The THICK SHORT line under title */
+.title-underline {
+  height: 10px; /* thickness */
+  background-color: #eedfcc; 
+  margin: 0 auto;
+  border-radius: 2px; 
+}
+
+.underline-pack {
+  width: 490px;
+}
+
+.underline-flight {
+  width: 860px;
+}
+
+.underline-house {
+  width: 900px;
 }
 
 .project-preview-img img{
@@ -442,7 +467,7 @@ html, body {
   font-size: 5rem;
   font-family: 'Inter', sans-serif;
   font-weight: 900;
-  margin-bottom: 10px;
+  margin-bottom: 10px ;
   color: #fff;
 }
 
@@ -458,7 +483,7 @@ html, body {
   border: none;
   border-top: 1px solid #444;
   width: 60%;
-  margin: 16px auto 0;
+  margin: 4px auto 0 ;
 }
 
 /* Responsive */
@@ -484,6 +509,7 @@ html, body {
     font-size: 28vw;
   }
 }
+
 
 /* Clipping Text Scroll Effect */
 .clipping-text-container {
@@ -614,7 +640,7 @@ html, body {
 
 /* Expanded State */
 .dropdown-wrapper.open .dropdown-content {
-  max-height: 800px; /* can be increased if needed */
+  max-height: 800px; 
 }
 
 /* List Reset + Styling */
@@ -668,80 +694,186 @@ html, body {
   border-radius: 16px;
 }
 
-/* CONTACT SECTION */
-.contact-section {
+/*Section divider*/
+/*.section-divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #555, #333); 
+  opacity: 0.3;
+  margin: 80px 0;
+}*/
+
+/*Section divider*/
+.section-divider {
+  position: relative;
+  height: 150px;
+  background-color: #ffffff;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Tech Stack inside Divider */
+.tech-stack-scroll {
+  position: absolute;
+  width: 200%;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.scroll-tech-wrapper {
+  width: 100%;
+}
+
+.scroll-tech {
+  display: inline-block;
+  animation: scrollText 35s linear infinite;
+  font-size: 4vw;
+  font-weight: 700;
+  color: #111;
+  opacity: 0.5;
+}
+
+.scroll-tech span {
+  margin: 0 60px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Same scroll animation */
+@keyframes scrollText {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Experience Section*/
+.experience-section {
+  padding: 100px 30px;
+  text-align: center;
   background: #0d0d0d;
   color: #fff;
-  padding: 160px 30px;
-  text-align: center;
 }
 
-.contact-section h2 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-  font-family: 'Poppins', sans-serif;
+.section-title {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
 }
 
-.contact-subtitle {
-  font-family: 'Space Mono', monospace;
-  font-size: 1.2rem;
-  margin-bottom: 40px;
+.experience-card {
+  max-width: 1500px;
+  margin: 0 auto;
+  background-color: #121212;
+  padding: 30px 35px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  text-align: left;
+}
+
+.experience-role {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.company {
+  font-weight: 400;
   color: #ccc;
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  max-width: 600px;
-  margin: 0 auto 60px;
+.experience-time {
+  font-size: 1.5rem;
+  color: #888;
+  margin-bottom: 15px;
+  font-family: monospace;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 16px;
-  border-radius: 10px;
+.experience-desc {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.experience-tasks {
+  font-size: 1.5rem;           /* Match paragraph font size */
+  line-height: 1.6;
+  color: #e0e0e0;              /* Match your description color */
+  padding-left: 1.5rem;        /* Indent bullets */
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.experience-tasks li {
+  margin-bottom: 0.75rem;      /* Add space between bullets */
+}
+
+.experience-mockup {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.experience-mockup img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
   border: 1px solid #333;
-  background: #1a1a1a;
-  color: #eee;
-  font-family: 'Space Mono', monospace;
-  font-size: 1rem;
-  resize: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-.contact-form button {
-  padding: 14px 28px;
-  border: none;
-  background: #00e676;
-  color: #0d0d0d;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
 
-.contact-form button:hover {
-  background: #00c165;
+
+/* CONTACT SECTION */
+.contact-section {
+  background-color: #fdf4e3;
+  padding: 120px 30px 60px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  font-family: 'Space Mono', monospace;
+  gap: 100px;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
 }
 
 .social-icons a {
-  color: #00e676;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  color: #000;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icons a:hover {
+  color: #007aff;
+  transform: scale(1.2);
+}
+
+.cv-button {
+  display: inline-block;
+  margin-bottom: 100px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  background-color: #000;
   color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cv-button:hover {
+  background-color: #333;
+}
+
+.contact-line {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #444;
+}
+
+.copyright {
+  font-size: 1rem;
+  color: #777;
 }
 
