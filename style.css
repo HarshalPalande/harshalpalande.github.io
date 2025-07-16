@@ -130,7 +130,7 @@ html, body {
 /* Greeting Animation */
 .greeting-title {
   font-family: 'Poppins', sans-serif;
-  font-size: clamp(30px, 5vw, 60px);
+  font-size: clamp(40px, 8vw, 80px);
   font-weight: 700;
   color: #fff;
   margin-bottom: 40px;
@@ -152,7 +152,7 @@ html, body {
 /* PROJECT SECTION */
 .project-section {
   background: #0d0d0d;
-  padding: 30px 30px 20px;
+  padding: 120px 30px 20px;
   text-align: center;
   color: #fff;
 }
@@ -446,6 +446,10 @@ html, body {
 
 .underline-house {
   width: 900px;
+}
+
+.underline-truthlens {
+  width: 350px;
 }
 
 .project-preview-img img{
@@ -778,9 +782,16 @@ html, body {
 }
 
 .company {
-  font-weight: 400;
-  color: #ccc;
+  text-decoration: none;   /* removes underline */
+  font-weight: 400;        /* as you specified */
+  color: #ccc;             /* your chosen color */
+  cursor: pointer;         /* shows it's clickable */
 }
+
+.company:hover {
+  color: #0077ff;          /* subtle hover effect (optional) */
+}
+
 
 .experience-time {
   font-size: 1.5rem;
@@ -826,7 +837,7 @@ html, body {
 /* CONTACT SECTION */
 .contact-section {
   background-color: #fdf4e3;
-  padding: 120px 30px 60px;
+  padding: 120px 30px 0px;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
   color: #222;
@@ -877,3 +888,36 @@ html, body {
   color: #777;
 }
 
+.footer-end {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px 0;
+  font-size: 2rem;
+  color: #555;
+  flex-wrap: wrap;
+  /*border-top: 1px solid #eee; /* Optional for subtle separation */
+}
+
+
+.made-with {
+  text-align: center; 
+}
+
+.copyright-text {
+  text-align: right;
+}
+
+/* Responsive stacking (optional but good for mobile) */
+@media (max-width: 600px) {
+  .footer-end {
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 20px 0;
+  }
+
+  .made-with,
+  .copyright-text {
+    text-align: center;
+  }
+}

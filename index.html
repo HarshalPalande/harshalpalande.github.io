@@ -24,6 +24,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollSmoother.min.js"></script>
 </head>
 <body>
+  <!--<nav id="navbar" class="navbar hidden">
+    <div class="nav-content">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>-->
   <div class="custom-cursor"></div>
 
   <!-- Smooth Scroll Wrapper -->
@@ -54,7 +62,7 @@
 
       <!-- PROJECTS -->
       <section class="project-section">
-        <h2>Projects</h2>
+        <h2>Projects⤵</h2>
         <!--Project 1-->
         <!--<div class="project-preview-img">
           <img src="images/Pack My Bag .png" alt="Pack My Bag Preview" />
@@ -62,7 +70,7 @@
           </a>
         </div>-->
         <div class="project-preview-img">
-          <img src="images/Pack My Bag .png" alt="Pack My Bag Preview" />
+          <img src="images/Pack My Bag.png" alt="Pack My Bag Preview" />
           
           <a href="https://pack-my-bag-production.up.railway.app/" 
              target="_blank" 
@@ -116,9 +124,9 @@
           </a>
         </div>-->
         <div class="project-preview-img">
-          <img src="images/flight delay prediction.png" alt="Flight Delay Prediction Preview" />
+          <img src="images/Flightbot.png" alt="Flight Delay Prediction Preview" />
           
-          <a href="#" 
+          <a href="https://huggingface.co/spaces/harshalpalande/flight-delay-predictor" 
              target="_blank" 
              class="project-link" 
              aria-label="Open Project">
@@ -136,10 +144,9 @@
             <div class="title-underline underline-flight"></div>
           </div>
           <div class="clipping-text-container">
-            <h1 class="clipping-text">Predicts flight delays<span>Know before you go</span></h1>
             <h1 class="clipping-text">Real flight data used<span>Trained for accuracy</span></h1>
-            <h1 class="clipping-text">Tracks time and route<span>Based on real trends</span></h1>
-            <h1 class="clipping-text">Random Forest powered<span>Smart and scalable</span></h1>
+            <h1 class="clipping-text">Track real-time flights.<span>Anywhere. Anytime.</span></h1>
+            <h1 class="clipping-text">Know airport insights.<span>Like a local.</span></h1>
             <!--dropdown-->
             <div class="clipping-text-container dropdown-wrapper">
               <h1 class="clipping-text dropdown-toggle">More Details →<span>Curious huh!</span></h1>
@@ -147,11 +154,11 @@
               <div class="dropdown-content">
                 <ul>
                   <li class="dropdown-title">Problems I Faced</li>
-                  <li><strong>1. Feature selection confusion:</strong> deciding what really affects delay wasn’t straightforward.</li>
-                  <li><strong>2. Slow training on large data :</strong> even in notebook, bigger datasets slowed things down.</li>
-                  <li><strong>3. Visualization clutter:</strong> making clean plots for analysis was harder than expected.</li>
-                  <li><strong>4. The dataset was imbalanced:</strong> meaning most flights weren’t delayed — so the model struggled to learn how to accurately predict delays.</li>
-                  <li><strong>5. Overfitting happened a few times:</strong> where the model performed great on training data but failed to generalize to real-world scenarios.</li>
+                  <li><strong>1. Working with Limitations:</strong> The AviationStack API was powerful, but limited — I had to stay creative with what I could offer while keeping the app useful and focused.</li>
+                  <li><strong>2. The API didn’t always return results :</strong> Sometimes I got empty data or errors, and I wasn’t sure if it was my code or the API’s fault.</li>
+                  <li><strong>3. Gradio UI Constraints :</strong> Using Gradio gave me a fast way to launch the interface, but it came with some customization limits — especially around styling and layout flexibility..</li>
+                  <li><strong>4. Designing for Simplicity :</strong> It was tempting to add more features, but I learned that simplicity often serves users better</li>
+                  <li><strong>5. Integrating Two Different APIs Smoothly :</strong> Managing responses from both AviationStack and OpenSky Network — with different formats, structures, and rate limits — made coordination tricky.</li>
                 </ul>
               </div>
             </div>
@@ -160,9 +167,9 @@
 
         <!--project 3-->
         <div class="project-preview-img">
-          <img src="images/house expense tracker.png" alt="Pack My Bag Preview" />
+          <img src="images/house expense tracker.png" alt="House Expense Tracker Preview" />
           
-          <a href="" 
+          <a href="https://colab.research.google.com/drive/1VqY-ZwzcbLLF6lBtGCEru6_3QevmM_5t" 
              target="_blank" 
              class="project-link" 
              aria-label="Open Project">
@@ -180,8 +187,8 @@
           <div class="clipping-text-container">
             <h1 class="clipping-text">Track. Save. Repeat.<span>Real-time insights. Smart forecasts.</span></h1>
             <h1 class="clipping-text">Smarter spending.<span>Manage, predict & control your expenses.</span></h1>
-            <h1 class="clipping-text">Under control.<span>Know where your money goes.</span></h1>
-            <h1 class="clipping-text">Forecast expenses.<span>Visualize habits. Budget smarter.</span></h1>
+            <h1 class="clipping-text">🧠 AI Insight<span>Detect changes. Plan smarter spending</span></h1>
+            <h1 class="clipping-text">Just upload it.<span>CSV to clarity in seconds.</span></h1>
             <!--dropdown-->
             <div class="clipping-text-container dropdown-wrapper">
               <h1 class="clipping-text dropdown-toggle">More Details →<span>Curious huh!</span></h1>
@@ -189,11 +196,51 @@
               <div class="dropdown-content">
                 <ul>
                   <li class="dropdown-title">Problems I Faced</li>
-                  <li><strong>1. Feature selection confusion:</strong> deciding what really affects delay wasn’t straightforward.</li>
-                  <li><strong>2. Slow training on large data :</strong> even in notebook, bigger datasets slowed things down.</li>
-                  <li><strong>3. Visualization clutter:</strong> making clean plots for analysis was harder than expected.</li>
-                  <li><strong>4. The dataset was imbalanced:</strong> meaning most flights weren’t delayed — so the model struggled to learn how to accurately predict delays.</li>
-                  <li><strong>5. Overfitting happened a few times:</strong> where the model performed great on training data but failed to generalize to real-world scenarios.</li>
+                  <li><strong>1. Running the whole notebook over and over was exhausting:</strong> If I refreshed the page or forgot to save progress, I had to rerun everything from scratch. And when it took time to install Prophet, I started appreciating the “Save to Drive” feature a lot more.</li>
+                  <li><strong>2. Prophet was slow to install and run :</strong> Especially on Colab, it felt like Prophet took years to install. And even when it worked, running forecasts took a noticeable chunk of time. I learned patience and caching 😅</li>
+                  <li><strong>3. Uploading the CSV took longer than expected:</strong> The first time I tested with a full expense file, it just… sat there. I thought it broke. Then I realized Prophet and pandas were just processing. That taught me I should show a loader or message while the file’s being read.</li>
+                  <li><strong>4. Some categories didn’t have enough data to predict :</strong> I tested with my “shopping” category — only 3 rows. The model struggled. I had to add a check to warn when there’s not enough data to forecast properly.</li>
+                </ul>
+              </div>
+            </div>
+
+            <hr class="project-divider" />
+
+          <!--project 3-->
+        <div class="project-preview-img">
+          <img src="images/Truthlens.png" alt="House Expense Tracker Preview" />
+          
+          <a href="https://truthlens-production-366d.up.railway.app/" 
+             target="_blank" 
+             class="project-link" 
+             aria-label="Open Project">
+             
+            <!-- Add arrow icon inside the link -->
+            <span class="arrow-icon">➡️</span>
+          </a>
+        </div>
+              
+          <!-- Title and Clipping Text -->
+          <div class="project-title-block">
+            <h3 class="project-title">Truthlens</h3>
+            <div class="title-underline underline-truthlens"></div>
+          </div>
+          <div class="clipping-text-container">
+            <h1 class="clipping-text">Track. Save. Repeat.<span>Real-time insights. Smart forecasts.</span></h1>
+            <h1 class="clipping-text">Smarter spending.<span>Manage, predict & control your expenses.</span></h1>
+            <h1 class="clipping-text">🧠 AI Insight<span>Detect changes. Plan smarter spending</span></h1>
+            <h1 class="clipping-text">Just upload it.<span>CSV to clarity in seconds.</span></h1>
+            <!--dropdown-->
+            <div class="clipping-text-container dropdown-wrapper">
+              <h1 class="clipping-text dropdown-toggle">More Details →<span>Curious huh!</span></h1>
+            
+              <div class="dropdown-content">
+                <ul>
+                  <li class="dropdown-title">Problems I Faced</li>
+                  <li><strong>1. Running the whole notebook over and over was exhausting:</strong> If I refreshed the page or forgot to save progress, I had to rerun everything from scratch. And when it took time to install Prophet, I started appreciating the “Save to Drive” feature a lot more.</li>
+                  <li><strong>2. Prophet was slow to install and run :</strong> Especially on Colab, it felt like Prophet took years to install. And even when it worked, running forecasts took a noticeable chunk of time. I learned patience and caching 😅</li>
+                  <li><strong>3. Uploading the CSV took longer than expected:</strong> The first time I tested with a full expense file, it just… sat there. I thought it broke. Then I realized Prophet and pandas were just processing. That taught me I should show a loader or message while the file’s being read.</li>
+                  <li><strong>4. Some categories didn’t have enough data to predict :</strong> I tested with my “shopping” category — only 3 rows. The model struggled. I had to add a check to warn when there’s not enough data to forecast properly.</li>
                 </ul>
               </div>
             </div>
@@ -235,7 +282,7 @@
   <div class="experience-card">
     <h3 class="experience-role">
       Junior Developer | Data Science Enthusiast
-      <span class="company">@ Atlee</span>
+      <a class="company" href="https://www.atlee.one" target="_blank" rel="noopener noreferrer">@ Atlee</a>
     </h3>
     <p class="experience-time">Feb 2024 – March 2025</p>
     <p class="experience-desc">
@@ -270,17 +317,19 @@
     <a href="docs/Harshal_CV.pdf" class="cv-button" download>📄 Download CV</a>
     
     <div class="social-icons">
-      <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="mailto:yourmail@example.com" target="_blank"><i class="fas fa-envelope"></i></a>
+      <a href="https://x.com/harshal_palande" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/harshall.palande/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/harshalpalande/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/HarshalPalande" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:harshalpalande9@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    </div> 
+  
+    <div class="footer-end">
+      <div class="made-with">Built with ❤️, bugs and late nights.</div>
+      <div class="copyright-text">© 2025 Harshal Palande. All rights reserved.</div>
     </div>
-
-    <p class="copyright">
-      © 2025 Harshal Palande. All rights reserved.
-    </p>
   </section>
+  
   
   
 
@@ -438,7 +487,9 @@
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     showImage(currentIndex);
   });
-  </script>
+</script>
+
+
   
   
   
