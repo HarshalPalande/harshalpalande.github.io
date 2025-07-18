@@ -20,6 +20,172 @@ html, body {
   cursor: none;
 }
 
+
+/* Fixed Navbar */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: rgba(128, 128, 128, 0.40); /* semi-transparent grey */
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 12px 10px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo Style */
+.logo {
+  background: black;
+  color: white;
+  font-family: 'Space Mono', monospace;
+  font-size: 20px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Navbar Links */
+.nav-content a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  transition: color 0.3s ease;
+}
+
+.nav-content {
+  display: flex;
+  gap: 24px; /* Adjust as needed */
+}
+
+
+.nav-content a:hover {
+  color: black;
+}
+
+
+/*Navbar-idea 2
+.navbar {
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: aurora 15s ease infinite;
+  border-radius: 20px;
+  color: white;
+}
+
+@keyframes aurora {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}*/
+.nav-content {
+  display: flex;
+  gap: 24px;
+  position: relative;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.preview {
+  position: absolute;
+  top: 130%; /* Push below nav item */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 170px;
+  display: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  padding: 0px;
+  z-index: 99;
+}
+
+.preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0px;
+}
+
+.nav-item:hover .preview {
+  display: block;
+}
+
+
+
+.preview {
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 250px;
+  display: none;
+  border-radius: 0px; /* ensure no rounding */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border: none; /* remove any borders */
+  background: #000; /* or match your theme */
+  padding: 0;
+  margin: 0;
+  z-index: 99;
+  overflow: hidden; /* hides content overflow */
+}
+
+.preview * {
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  line-height: 1 !important;
+}
+
+
+
+/*.nav-content {
+  display: flex;
+  gap: 24px;
+  position: relative;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.preview {
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 250px;
+  display: none;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  padding: 0px;
+  z-index: 99;
+  border-radius: 0; 
+}
+
+.preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0; 
+}
+
+.nav-item:hover .preview {
+  display: block;
+}
+
 /* Custom Cursor */
 .custom-cursor {
   position: fixed;
@@ -71,8 +237,8 @@ html, body {
   font-size: 20vw;
   font-weight: 700;
   color: #000;
-  opacity: 0.07;
-  animation: scrollText 40s linear infinite;
+  opacity: 0.56;
+  animation: scrollText 15s linear infinite;
 }
 
 @keyframes scrollText {
@@ -453,7 +619,7 @@ html, body {
 }
 
 .project-preview-img img{
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto 40px; /* Bottom spacing to title */
   border-radius: 16px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
@@ -766,7 +932,7 @@ html, body {
 }
 
 .experience-card {
-  max-width: 1500px;
+  max-width: 1300px;
   margin: 0 auto;
   background-color: #121212;
   padding: 30px 35px;
@@ -782,10 +948,10 @@ html, body {
 }
 
 .company {
-  text-decoration: none;   /* removes underline */
-  font-weight: 400;        /* as you specified */
-  color: #ccc;             /* your chosen color */
-  cursor: pointer;         /* shows it's clickable */
+  text-decoration: none;   
+  font-weight: 400;        
+  color: #ccc;             
+  cursor: pointer;         
 }
 
 .company:hover {
@@ -807,9 +973,9 @@ html, body {
 }
 
 .experience-tasks {
-  font-size: 1.5rem;           /* Match paragraph font size */
+  font-size: 1.5rem;           
   line-height: 1.6;
-  color: #e0e0e0;              /* Match your description color */
+  color: #e0e0e0;              
   padding-left: 1.5rem;        /* Indent bullets */
   margin-top: 1rem;
   margin-bottom: 1.5rem;
@@ -921,3 +1087,4 @@ html, body {
     text-align: center;
   }
 }
+
