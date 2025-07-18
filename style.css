@@ -60,7 +60,7 @@ html, body {
 
 .nav-content {
   display: flex;
-  gap: 24px; /* Adjust as needed */
+  gap: 24px;  
 }
 
 
@@ -132,12 +132,12 @@ html, body {
   display: none;
   border-radius: 0px; /* ensure no rounding */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  border: none; /* remove any borders */
-  background: #000; /* or match your theme */
+  border: none; 
+  background: #000; 
   padding: 0;
   margin: 0;
   z-index: 99;
-  overflow: hidden; /* hides content overflow */
+  overflow: hidden; 
 }
 
 .preview * {
@@ -955,7 +955,7 @@ html, body {
 }
 
 .company:hover {
-  color: #0077ff;          /* subtle hover effect (optional) */
+  color: #0077ff;          /* subtle hover effect*/
 }
 
 
@@ -1062,7 +1062,7 @@ html, body {
   font-size: 2rem;
   color: #555;
   flex-wrap: wrap;
-  /*border-top: 1px solid #eee; /* Optional for subtle separation */
+  /*border-top: 1px solid #eee; /* for subtle separation */
 }
 
 
@@ -1074,7 +1074,7 @@ html, body {
   text-align: right;
 }
 
-/* Responsive stacking (optional but good for mobile) */
+
 @media (max-width: 600px) {
   .footer-end {
     flex-direction: column;
