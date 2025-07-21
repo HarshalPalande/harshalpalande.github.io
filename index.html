@@ -279,10 +279,10 @@
               <div class="dropdown-content">
                 <ul>
                   <li class="dropdown-title">Problems I Faced</li>
-                  <li><strong>1. Running the whole notebook over and over was exhausting:</strong> If I refreshed the page or forgot to save progress, I had to rerun everything from scratch. And when it took time to install Prophet, I started appreciating the “Save to Drive” feature a lot more.</li>
-                  <li><strong>2. Prophet was slow to install and run :</strong> Especially on Colab, it felt like Prophet took years to install. And even when it worked, running forecasts took a noticeable chunk of time. I learned patience and caching 😅</li>
-                  <li><strong>3. Uploading the CSV took longer than expected:</strong> The first time I tested with a full expense file, it just… sat there. I thought it broke. Then I realized Prophet and pandas were just processing. That taught me I should show a loader or message while the file’s being read.</li>
-                  <li><strong>4. Some categories didn’t have enough data to predict :</strong> I tested with my “shopping” category — only 3 rows. The model struggled. I had to add a check to warn when there’s not enough data to forecast properly.</li>
+                  <li><strong>1. Large Model Dependencies:</strong> Loading multiple heavy Transformer models caused memory issues and slow inference on local environments.li>
+                  <li><strong>2. Article Extraction Failures:</strong> Some websites blocked newspaper3k parsing or returned incomplete content. Needed robust error handling.</li>
+                  <li><strong>3. Bias Detection Challenges:</strong> Zero-shot classification models can return misleading labels when context is vague or the article is too short.</li>
+                  <li><strong>4. Summarization Quality:</strong> The summary often required fine-tuning to avoid overly generic or incomplete sentences.</li>
                 </ul>
               </div>
             </div>
